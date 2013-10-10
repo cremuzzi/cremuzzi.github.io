@@ -17,13 +17,17 @@ document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.se
 <!--[if lt IE 9]>
 <script src="lib/js/html5shiv.js"></script>
 <![endif]-->
+<style>
+section strong {text-transform:uppercase}
+section ul, section li{list-style:none}
+</style>
 </head>
 <body>
 <div class="reveal">
   <div class="slides">
     <section>
 <h1>Carlos Remuzzi</h1>
-<h3>una historia de adopcion</h3>
+<h3>una historia de adopción</h3>
 <p>
 <small>Content by <a href="http://www.carlosremuzzi.github.io">Carlos Remuzzi</a><br /><a href="http://facebook.com/cremuzzi">facebook.com/cremuzzi</a></small>
 <br /><br />
@@ -33,54 +37,48 @@ document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.se
 
 <section>
 <h2>NACIDO :: 1983</h2>
+<ul>
+<li><strong>Lugar:</strong> <span>Bolivia</span></li>
+<li><strong>Nombre:</strong> <span>???</span></li>
+<li><strong>Padres:</strong> <span>???</span></li>
+<li><strong>Fecha Nacimiento:</strong> <span>???</span></li>
+<li><strong>Fotos:</strong> <span>???</span></li>
+</ul>
 </section>
-
 <section>
-<h3>Lugar : Bolivia</h3>
-<h3>Nombre ???</h3>
-<h3>Padres ???</h3>
-<h3>Fecha ???</h3>
-<h3>Fotos ???</h3>
+<h2>Virgen de Fátima :: 1983-1985</h2>
+<ul>
+<li><strong>Lugar:</strong> Istituto Virgen de Fatima, Obrajes, La Paz</li>
+<li><strong>Nombre:</strong> Carlos Paredes (c.)</li>
+<li><strong>Padres:</strong> ???</li>
+<li><strong>Fecha Nacimiento</strong>: 23/12/83 (c.)</li>
+<li><strong>Fotos:</strong> ???</li>
+</ul>
 </section>
-
 <section>
-<h2>Virgen de Fatima :: 1983-1985</h2>
-</section>
-
 <section>
-<h3>Lugar : Istituto Virgen de Fatima, Obrajes, La Paz</h3>
-<h3>Nombre Convencional : Carlos Paredes</h3>
-<h3>Padres ???</h3>
-<h3>Fecha Nacimiento Convencional : 23/12/83</h3>
-<h3>Fotos ???</h3>
+<h2>Papá e Mamma :: 1985 - hoy</h2>
+<ul>
+<li><strong>Lugar:</strong> Bergamo, Italia</li>
+<li><strong>Nombre:</strong> Gabriel Remuzzi</li>
+<li><strong>Padres:</strong> Giuseppe Remuzzi y Manuela Livio</li>
+<li><strong>Fecha Nacimiento</strong>: Convencional 23/12/83</li>
+<li><strong>Fotos:</strong> infinitas !</li>
+</ul><br /><br /><br /><br />
+<h3>&#9660;</h3>
 </section>
-
-<section>
-<h2>Papa' e Mamma :: 1985 - hoy</h2>
-</section>
-
-<section>
-<h3>Lugar : Bergamo, Italia</h3>
-<h3>Nombre: Gabriel Remuzzi</h3>
-<h3>Padres: Giuseppe Remuzzi y Manuela Livio</h3>
-<h3>Fecha Nacimiento Convencional : 23/12/83</h3>
-<h3>Fotos: infinitas !</h3>
-</section>
-
 <section>
 <img src="img/pic1.jpg"/>
 </section>
-
 <section>
 <img src="img/pic2.jpg"/>
 </section>
-
 <section>
 <img src="img/pic3.jpg"/>
 </section>
-
 <section>
 <img src="img/pic4.jpg"/>
+</section>
 </section>
 
 <section>
@@ -99,7 +97,7 @@ document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.se
 </section>
 
 <section>
-<h2>"Un dia volveras para ayudar a tu pais"</h2>
+<h2>"Un día volveras para ayudar a tu país"</h2>
 </section>
 
 <section>
@@ -116,13 +114,13 @@ document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.se
 </section>
 
 <section>
-<h2>Asociacion Familias del Corazon</h2>
+<h2>Asociación Familias del Corazón</h2>
 <h3>miembro de la red mundial Melograno Network</h3>
 </section>
 
 <section>
-<h2>LA REVELACION</h2>
-<h3>Empezo' desde el inicio</h3>
+<h2>La revelación</h2>
+<h3>Empezó desde el inicio</h3>
 </section>
 
 <section>
@@ -130,13 +128,11 @@ document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.se
 <p>con cuentos y anecdotas en cada oportunidad</p>
 </section>
 
-
-
 <section>
-<h1>GRACIAS</h1>
+<h1>Gracias</h1>
 <h3>Carlos Remuzzi</h3>
 <p><a target="_blank" href="http://facebook.com/cremuzzi">facebook.com/cremuzzi</a></p>
-<h3>Familias del Corazon La Paz</h3>
+<h3>Familias del Corazón La Paz</h3>
 <p><a target="_blank" href="http://facebook.com/afclapaz">facebook.com/afclapaz</a></p>
 </section>
 </div>
@@ -151,7 +147,7 @@ Reveal.initialize({
   history: true,
   center: true,
   theme: Reveal.getQueryHash().theme, 
-  transition: Reveal.getQueryHash().transition || 'default', 
+  transition: Reveal.getQueryHash().transition || 'cube', 
   dependencies: [
     { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
     { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
