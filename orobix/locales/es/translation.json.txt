@@ -1,0 +1,151 @@
+﻿{
+  "app": {
+    "name": "i18next"
+  },
+  "s1": {
+    "subtitle":"presentación de la empresa"
+  },
+  "s2": {
+    "t1":"Empresa fundada en el año 2009",
+    "t2":"Casa matriz: Bergamo, Italia",
+    "t3":"3 fundadores con experiencia complementaria",
+    "t4":"Análisis de imagen y desarrollo de algoritmos",
+    "t5":"Aseguramiento de la calidad - Gestión de proyectos",
+    "t6":"Desarrollo de Negocios",
+    "t7":"2013: 9 personas,  crecimiento previsto, espacio de oficinas en expansión"
+  },
+  "s3": {
+    "title":"Misión",
+    "t1":"Convertir las innovaciones de la investigación en herramientas utilizables",
+    "t2":"Introducir las ultimas tecnologías en el mercado, a través del desarrollo de herramientas que se puedan fácilmente utilizar y que se puedan convertir sin problemas como parte del flujo de trabajo estándar"
+  },
+  "s4": {
+    "title":"Visión",
+    "t1":"Ser proveedor sólido de los productos/servicios desarrollados a partir de las tecnologías mas recientes en el sector de el análisis de imágenes y la ingeniería de datos",
+    "t2":"Objetivo",
+    "t3":"Crear soluciones para problemas reales",
+    "t4":"Satisfacción del cliente",
+    "t5":"Productos de calidad y fiabilidad"
+  },
+  "s5": {
+    "t1":"desde los primeros días",
+    "t2":"sistema flexible para incorporar los procedimientos de los socios, si necesario"
+  },
+  "s6": {
+    "title":"Actividades",
+    "t1":"I+D en análisis de imagen",
+    "t2":"Desarrollo de algoritmos",
+    "t3":"Tecnologías de análisis semiautomática",
+    "t4":"Ingeniería de datos",
+    "t5":"Gestión de datos",
+    "t6":"Análisis de datos",
+    "t7":"Desarrollo de productos & prestación de servicios",
+    "t8":"Aplicaciones de escritorio & móvil",
+    "t9":"Servicios basados en la Web y en la Nube"
+  },
+  "s7": {
+    "title":"Análisis de imagenes",
+    "t1":"Específicamente imágenes biomédicas",
+    "t2":"Algoritmos generales para aplicaciones específicas de pacientes",
+    "t3":"Nuevo enfoque para la reconstrucción y análisis de imágenes",
+    "t4":"Tecnologías: aprendizaje automático, todos los mayores frameworks de análisis de imágenes, vmtk"
+  },
+  "s8": {
+    "title":"Vmtk",
+    "t1":"a partir de 2004, ahora mantenido por Orobix",
+    "t2":"Proyecto de código abierto con varios cientos de usuarios en todo el mundo en importantes ambientes de investigación",
+    "t3":"lista de correo electrónico activa con mas de 200 visitantes únicos al día"
+  },
+  "s9": {
+    "title":"Ingeniería de datos",
+    "t1":"Transferencia de datos y recolección distribuida ",
+    "t2":"Acceso simultaneo a los datos, datos sensibles",
+    "t3":"Almacenamiento de datos",
+    "t4":"cGCP",
+    "t5":"Análisis de datos",
+    "t6":"Real time de varias fuentes, aprendizaje automático",
+    "t7":"Sistemas escalables",
+    "t8":"No hay impacto del tamaño en el rendimiento",
+    "t9":"Tecnologías: programación funcional, grandes volúmenes de datos, visualización"
+  },
+  "s10": {
+    "title":"Desarrollo de productos y prestación de servicios",
+    "t1":"Integración de todas las tecnologías anteriores",
+    "t2":"Personalización de soluciones de usuario final",
+    "t3":"Algunos ejemplos"
+  },
+  "s11": {
+    "title":"Desarrollo de productos",
+    "t1":"sistema de historia clínica electrónica",
+    "t2":"Shirop como motor de base de datos"
+  },
+  "s12": {
+    "title":"Desarrollo de productos",
+    "t1":"desarrollado en colaboración con Instituto Europeo de Oncología",
+    "t2":"disponible en el AppStore"
+  },
+  "s13": {
+    "title":"Desarrollo de productos",
+    "t1":"Promoviendo la seguridad del paciente y el mejoramiento de la seguridad  en los cuidados críticos",
+    "t2":"Sistema distribuido de recogida de datos",
+    "t3":"En uso en mas de 300 Unidades de Cuidado Critico en Italia y en Europa"
+  },
+  "s14": {
+    "title":"Prestación de servicios",
+    "t1":"visualizador en navegador web, computación en la Nube",
+    "t2":"fines didácticos, expansión planeada"
+  },
+  "s15": {
+    "title":"Prestación de servicios",
+    "t1":"testado en 63 pacientes con excelentes resultados",
+    "t2":"difusión mas amplia en curso"
+  },
+  "s16": {
+    "title":"Recursos",
+    "t1":"Portafolio de lenguajes de programación",
+    "t2":"Clojure, C++, JavaScript, Python, Objective-C, ...",
+    "t3":"Interfaces de usuario adaptadas a los flujos de trabajo",
+    "t4":"Desarrollado sobre las necesidades del usuario",
+    "t5":"Integración de sistemas",
+    "t6":"A partir de cero y con los sistemas ya existentes",
+    "t7":"Tecnologías de código abierto",
+    "t8":"Favorece a los negocios"
+  },
+  "s17": {
+    "title":"Personas (actualmente 9+)",
+    "t1":"50% Científicos - I+D",
+    "t2":"Biomédicos y Ciencias de la Computación",
+    "t3":"30% Programadores - Producción",
+    "t4":"Ciencias de la Computación",
+    "t5":"20% QA - Control",
+    "t6":"Gestión",
+    "t7":"~% Coordinación general",
+    "t8":"Gestión de proyectos"
+  },
+  "s18": {
+    "title":"Campos de acción",
+    "t1":"Ciencias de la vida",
+    "t2":"Aplicaciones específicas a la medida de las necesidades específicas",
+    "t3":"Farmacéutica",
+    "t4":"Colección de datos / imágenes distribuidos, y análisis de ensayos clínicos y actividades posteriores a la comercialización",
+    "t5":"Todas las aplicaciones de uso intensivo de datos",
+    "t6":"Integración de datos en tiempo real",
+    "t7":"Análisis de datos en tiempo real"
+  },
+  "s19": {
+    "title":"Ciencias de la vida"
+  },
+  "s20": {
+    "title":"Farmacéutica",
+    "t1":"Desarrollo en curso de una aplicación híbrida para la recolección a nivel mundial de datos, monitoreo y análisis in situ de imágenes para la gestión/tratamiento de enfermedades específicos para el paciente"
+  },
+  "s21": {
+    "title":"Aplicación de uso intensivo de datos",
+    "t1":"Campo ambiental",
+    "t2":"Optimización con restricciones no lineales para la generación y el consumo de energía basada en el mercado, el clima y la modelización ambiental",
+    "t3":"Ahora en producción"
+  },
+  "s22": {
+    "title":"Nuestros clientes"
+  }
+}
