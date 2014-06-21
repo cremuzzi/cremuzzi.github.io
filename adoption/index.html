@@ -20,6 +20,7 @@ document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.se
 <style>
 section strong {text-transform:uppercase;color:#13daec;}
 section ul, section li{list-style:none}
+td.top {vertical-align:top;}
 </style>
 </head>
 <body>
@@ -34,23 +35,33 @@ section ul, section li{list-style:none}
 </section>
 <section data-transition="none">
   <h2>NACIDO :: 1983</h2>
+  <table>
+  <tr><td class="top">
+  <img style="margin:0;padding:0;border:0;background:none;box-shadow:none;" src="img/bolivia.outline.png"/>
+  </td><td class="top">
   <ul>
-  <li><strong>Lugar:</strong> <span>Bolivia</span></li>
-  <li><strong>Nombre:</strong> <span>???</span></li>
-  <li><strong>Padres:</strong> <span>???</span></li>
-  <li><strong>Fecha Nacimiento:</strong> <span>???</span></li>
-  <li><strong>Fotos:</strong> <span>???</span></li>
+  <li class="fragment" data-fragment-index="0"><strong>Lugar</strong> <span>Bolivia</span></li>
+  <li class="fragment" data-fragment-index="1"><strong>Nombre</strong> <span>???</span></li>
+  <li class="fragment" data-fragment-index="2"><strong>Padres</strong> <span>???</span></li>
+  <li class="fragment" data-fragment-index="3"><strong>Cumpleaños</strong> <span>???</span></li>
+  <li class="fragment" data-fragment-index="4"><strong>Fotos</strong> <span>???</span></li>
   </ul>
+  </td></tr></table>
 </section>
 <section data-transition="none">
 <h2>Virgen de Fátima :: 1983-1985</h2>
+<table>
+  <tr><td class="top">
+  <img src="img/hogar.jpg"/>
+  </td><td class="top">
 <ul>
-<li><strong>Lugar:</strong> Istituto Virgen de Fatima, SEDEGES La Paz</li>
-<li><strong>Nombre:</strong> Carlos Paredes (c.)</li>
-<li><strong>Padres:</strong> ???</li>
-<li><strong>Fecha Nacimiento</strong>: 23/12/83 (c.)</li>
-<li><strong>Fotos:</strong> ???</li>
+<li class="fragment" data-fragment-index="0"><strong>Lugar</strong> I. Virgen de Fatima, La Paz</li>
+<li class="fragment" data-fragment-index="1"><strong>Nombre</strong> Carlos Paredes (c.)</li>
+<li class="fragment" data-fragment-index="2"><strong>Padres</strong> ???</li>
+<li class="fragment" data-fragment-index="3"><strong>Cumpleaños</strong> 23/12/83 (c.)</li>
+<li class="fragment" data-fragment-index="4"><strong>Fotos</strong> ???</li>
 </ul>
+  </td></tr></table>
 </section>
 <section>
 <img src="img/babyOnScale.jpg"/>
@@ -58,11 +69,11 @@ section ul, section li{list-style:none}
 <section data-transition="none">
 <h2>Papá e Mamma :: 1985 - hoy</h2>
 <ul>
-<li><strong>Lugar:</strong> Bergamo, Italia</li>
-<li><strong>Nombre:</strong> Gabriel Remuzzi</li>
-<li><strong>Padres:</strong> Giuseppe Remuzzi y Manuela Livio</li>
-<li><strong>Fecha Nacimiento</strong>: 23/12/83 (c.)</li>
-<li><strong>Fotos:</strong> infinitas !</li>
+<li class="fragment" data-fragment-index="0"><strong>Lugar</strong> Bergamo, Italia</li>
+<li class="fragment" data-fragment-index="1"><strong>Nombre</strong> Gabriel Remuzzi</li>
+<li class="fragment" data-fragment-index="2"><strong>Padres</strong> Giuseppe Remuzzi y Manuela Livio</li>
+<li class="fragment" data-fragment-index="3"><strong>Cumpleaños</strong> 23/12/83 (c.)</li>
+<li class="fragment" data-fragment-index="4"><strong>Fotos</strong> infinitas !</li>
 </ul>
 </section>
 <section>
@@ -76,9 +87,6 @@ section ul, section li{list-style:none}
 </section>
 <section>
 <img src="img/mountain.png"/>
-</section>
-<section>
-<img src="img/pic4.jpg"/>
 </section>
 <section>
 <img src="img/pic3.jpg"/>
