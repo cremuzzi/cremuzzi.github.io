@@ -27,7 +27,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
   <div class="slides">
 <section>
   <h1>C.G. Remuzzi</h1>
-  <h3>una historia de adopción</h3>
+  <h3>I was adopted but so what?</h3>
   <p>
   <small>Content by <a href="http://www.carlosremuzzi.github.io">Carlos Remuzzi</a><br /><a href="http://facebook.com/cremuzzi">facebook.com/cremuzzi</a></small>
   </p>
@@ -220,6 +220,10 @@ Reveal.initialize({
   history: true,
   center: true,
   transition: 'slide', // none/fade/slide/convex/concave/zoom
+  // Parallax background image
+  //parallaxBackgroundImage: 'img/looper.b.png', // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
+  // Parallax background size 5cd4d5
+  //parallaxBackgroundSize: '16000px 800px' // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
   // Optional reveal.js plugins
   dependencies: [
     { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
@@ -228,11 +232,7 @@ Reveal.initialize({
     { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
     { src: 'plugin/zoom-js/zoom.js', async: true },
     { src: 'plugin/notes/notes.js', async: true }
-  ],
-  // Parallax background image
-  parallaxBackgroundImage: 'img/looper.b.png', // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
-  // Parallax background size 5cd4d5
-  parallaxBackgroundSize: '16000px 800px' // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
+  ]
 });
 </script>
 </body>
