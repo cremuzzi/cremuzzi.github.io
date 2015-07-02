@@ -456,7 +456,6 @@ semantic.ready = function() {
       $rail = $('<div />')
         .addClass('ui dividing right rail')
         .html($sticky)
-        .prependTo($container)
       ;
       $sticky.sticky({
         context: $container,
