@@ -117,6 +117,9 @@ body {
   font-weight: bold;
 }
 
+.cover-heading {
+font:normal 700 70px 'Ubuntu',sans-serif; 
+}
 
 /*
  * Footer
