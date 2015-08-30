@@ -1,4 +1,4 @@
 # globo
-## your clinical history wherever you are
+## your medical record wherever you are
 
 author Carlos Remuzzi
