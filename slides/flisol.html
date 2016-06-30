@@ -49,17 +49,6 @@
           <h6><small><em>FLISOL 2016 La Paz</em></small></h6>
         </section>
 
-        <section style="text-align: left;">
-          <p>
-          <strong>git -</strong>  <em>n.</em> "worthless person," 1946, British slang, a southern variant of Scottish get "illegitimate child, brat," which is related to beget.<br />
-            <em>~ Etymology Dictionary, Douglas Harper</em>
-          </p>
-          <p class="fragment" data-fragment-index="1">
-            I'm an egotistical b*stard, and I name all my projects after myself. First 'Linux', now 'Git'.<br />
-            <em>~ Linus Torvalds</em>
-          </p>
-        </section>
-
         <section>
           <h2>Contenidos</h2>
           <ol>
@@ -69,29 +58,61 @@
             <li>Mas herramientas</li>
           </ol>
         </section>
+        <section style="text-align: left;">
+          <p>
+          <strong>git -</strong>  <em>noun</em> <strong>1. </strong> (British Slang).<br />a contemptible person, often a fool<br />
+            <em>~ Collins Dictionary</em>
+          </p>
+          <p class="fragment" data-fragment-index="1">
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br />
+            I'm an egotistical b*stard, and I name all my projects after myself. First 'Linux', now <strong>'Git'.</strong><br />
+            <em>~ Linus Torvalds</em>
+          </p>
+        </section>
+
+        <section style="text-align: left;">
+          <p>
+            <img src="img/linus-torvalds.jpg" height="100px"><br />creado en el 2005 por Linus Torvalds</p>
+          <p class="fragment" data-fragment-index="1">
+            <img src="img/junio-hamano.jpg" height="100px"><br />mantenido por Junio C Hamano</p>
+        </section>
 
         <section>
           <h2>1. Que cosa es GIT</h2>
           <ul>
-            <li class="fragment" data-fragment-index="1">SCM - Sistema de manejo de codigo fuente</li>
+            <li class="fragment" data-fragment-index="1">Sistema de Control de Versiones</li>
             <li class="fragment" data-fragment-index="2">Open Source</li>
-            <li class="fragment" data-fragment-index="3">Integridad</li>
+            <li class="fragment" data-fragment-index="3">Garantiza Integridad de los Datos</li>
             <li class="fragment" data-fragment-index="4">Alto Rendimiento</li>
-            <li class="fragment" data-fragment-index="5">Distribuido</li>
           </ul>
         </section>
 
-        <section style="text-align: left;">
-          <h5>Sistema de manejo de codigo fuente</h5>
-          <p class="fragment" data-fragment-index="1">
-          <img src="img/linus-torvalds.jpg" height="100px"><br />creado en el 2005 por Linus Torvalds</p>
-          <p class="fragment" data-fragment-index="2">
-          <img src="img/junio-hamano.jpg" height="100px"><br />
-          mantenido por Junio C Hamano</p>
+        <section>
+          <h2>Sistema De Control De Versiones Distribuido</h2>
+          <h3>DVCS</h3>
         </section>
+
+        <section>
+          <h4>Sistemas de control de versiones locales</h4>
+          <p><small>PRO: simple<br />CONTRA: fácil equivocarse, falta la dimensión colaborativa </small></p>
+          <img src="img/versiones-locales.png" height="400px">
+        </section>
+
+        <section>
+          <h4>Sistemas Centralizados - CVCS</h4>
+          <p><small>PRO: introduce colaboración <br />CONTRA: depende de único servidor, posible perdida de datos</small></p>
+          <img src="img/centralized.png" height="400px">
+        </section>
+
+        <section>
+          <h4>Sistemas Distribuidos - DVCS</h4>
+          <p><small>replica total del repositorio</small></p>
+          <img src="img/distributed.png" height="400px">
+        </section>
+
         <section style="text-align: left;">
           <h2>Open Source</h2>
-          <p>codigo fuente disponible:</p>
+          <p>código fuente disponible:</p>
           <p>
             https://github.com/git/git
           </p> 
@@ -107,10 +128,21 @@
         <section>
           <h2>Integridad</h2>
           <ul>
-            <li>se calcula un hash de cada istantanea</li>
+            <li>se calcula un hash de cada instantánea</li>
             <li>SHA-1 checksum, 40 caracteres</li>
             <li>se verifica antes de escribir cualquier dato</li>
           </ul>
+        </section>
+
+        <section>
+          <h2>Ejemplo de sha1</h2>
+          <p>Calculamos el sha-1 de la palabra "Agetic"</p>
+          <p>La misma palabra (o archivo) genera siempre el mismo hash</p>
+          <pre><code class="bash">
+$ echo -n Agetic | sha1sum
+
+2bdcdee7922ad50831f8ee45e9dd836097f58853  -
+          </code></pre>
         </section>
 
         <section>
@@ -119,22 +151,7 @@
         </section>
 
         <section>
-          <h2>Sistema Distribuido</h2>
-        </section>
-
-        <section>
-          <h4>Sistemas Centralizados </h4>
-          <img src="img/centralized.png" height="400px">
-        </section>
-
-        <section>
-          <h4>Sistemas Distribuidos</h4>
-          <img src="img/distributed.png" height="400px">
-        </section>
-
-
-        <section>
-          <h2>2.1 Instalacion</h2>
+          <h2>2.1 Instalación</h2>
           <h5>Linux:</h5>
 <pre><code data-trim data-noescape>
 apt-get install git # Debian / Ubuntu
@@ -142,15 +159,23 @@ yum install git-all # Fedora
 </code></pre>
           <h5>Windows:</h5>
           <p><a href="http://git-scm.com/download/win">git-scm.com/download/win</a></p>
-          <h5>Linux:</h5>
+          <h5>Mac:</h5>
           <p><a href="http://git-scm.com/download/mac">git-scm.com/download/mac</a></p>
         </section>
 
         <section>
-          <h2>2.2 Configuracion</h2>
-          <pre><code>
-          $ git config --global user.name "Jimmy Best"
-          $ git config --global user.email jimmy@best.com
+          <h2>2.2 Configuración</h2>
+          Configuración básica de nombre y correo electrónico<br />
+          <pre><code class="bash">
+$ git config --global user.name "Jimmy Best"
+$ git config --global user.email jimmy@best.org
+          </code></pre>
+          Ver la configuración actual
+          <pre><code class="bash">
+$ git config --list
+
+user.name=Jimmy Best
+user.email=jimmy@best.org
           </code></pre>
         </section>
 
@@ -160,14 +185,14 @@ yum install git-all # Fedora
 
         <section>
           <h5>crea un repositorio nuevo</h5>
-          <pre><code>
-           $ git init
+          <pre><code class="bash">
+$ git init
           </code></pre>
         </section>
 
         <section>
           <h5>verifica el estado de tu repositorio</h5>
-    <pre><code>
+    <pre><code class="bash">
 $ git status
 
 On branch master
@@ -192,19 +217,19 @@ Untracked files:
         </section>
 
         <section>
-          <p style="background-color:#ffffff"><img src="img/staging-area.png"></p>
+          <img src="img/three-states.png">
         </section>
 
         <section>
           <h5>Añadir cambios</h5>
-          <pre><code>
-           $ git add
+          <pre><code class="bash">
+$ git add
           </code></pre>
         </section>
 
         <section>
           <h5>Hacer Commit</h5>
-          <pre><code>
+          <pre><code class="bash">
 $ git commit     # la staging area
 $ git commit -a  # todos los archivos
           </code></pre>
@@ -212,41 +237,40 @@ $ git commit -a  # todos los archivos
 
         <section>
           <h5>Ver la historia de tus commits</h5>
-          <pre><code>
+          <pre><code class="bash">
 $ git log 
 commit 0f1bf4b1b5cb74342de9c1f6280b39ca5a1f79eb
 Author: Carlos Remuzzi <cremuzzi@agetic.gob.bo>
 Date:   Tue Apr 19 20:22:57 2016 +0000
 
     adding configuration
-
-          </code></pre>
+</code></pre>
         </section>
 
         <section>
           <h5>Configurar un repositorio remoto</h5>
-          <pre><code>
+          <pre><code class="bash">
 $ git remote add URL_DEL_REPOSITORIO
           </code></pre>
         </section>
 
         <section>
           <h5>Enviar a repositorio remoto</h5>
-          <pre><code>
+          <pre><code class="bash">
 $ git push -u origin master
           </code></pre>
         </section>
 
         <section>
           <h5>Jalar del repositorio remoto</h5>
-          <pre><code>
+          <pre><code class="bash">
 $ git pull 
           </code></pre>
         </section>
 
         <section>
           <h5>Crear una nueva rama</h5>
-          <pre><code>
+          <pre><code class="bash">
 $ git branch NOMBRE_DE_LA_RAMA   # crea la rama
 $ git checkout -b NOMBRE_DE_LA_RAMA   # crea la rama y entra a la misma
           </code></pre>
@@ -254,14 +278,14 @@ $ git checkout -b NOMBRE_DE_LA_RAMA   # crea la rama y entra a la misma
 
         <section>
           <h5>Cambiar de rama</h5>
-          <pre><code>
+          <pre><code class="bash">
 $ git checkout NOMBRE_DE_LA_RAMA 
           </code></pre>
         </section>
 
         <section>
           <h5>Unir dos ramas</h5>
-          <pre><code>
+          <pre><code class="bash">
 $ git merge NOMBRE_DE_LA_SEGUNDA_RAMA 
           </code></pre>
         </section>
@@ -280,9 +304,11 @@ $ git merge NOMBRE_DE_LA_SEGUNDA_RAMA
             <li>bisect</li>
           </ul>
         </section>
-
         <section>
-          <h1>FIN</h1>
+          <img src="img/git-out.jpg">
+        </section>
+        <section>
+          <h1>GRACIAS</h1>
           <em>lecturas recomendadas</em><br />
           <ul>
             <li>git --help</li>
@@ -291,7 +317,6 @@ $ git merge NOMBRE_DE_LA_SEGUNDA_RAMA
             <li>GIT avanzado: <a href="http://bit.ly/git-pycon-2015">bit.ly/git-pycon-2015</a></li>
           </ul>
         </section>
-
       </div>
 
     </div>
