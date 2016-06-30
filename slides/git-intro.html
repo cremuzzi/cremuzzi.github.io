@@ -53,27 +53,20 @@
           <h3>Contenidos</h3>
           <ol>
             <li>que cosa es</li>
-            <li>instalacion</li>
-            <li>configuracion</li>
-            <li>commit</li>
-            <li>branch</li>
+            <li>instalación & configuración</li>
+            <li>iniciar un proyecto</li>
+            <li>git status</li>
             <li>staging area</li>
+            <li>git commit</li>
           </ol>
         </section>
 
         <section>
           <h2>Que cosa es GIT</h2>
-          <ul>
-            <li class="fragment" data-fragment-index="1">SCM - Sistema de manejo de codigo fuente</li>
-            <li class="fragment" data-fragment-index="2">Open Source</li>
-            <li class="fragment" data-fragment-index="3">Integridad</li>
-            <li class="fragment" data-fragment-index="4">Alto Rendimiento</li>
-            <li class="fragment" data-fragment-index="5">Distribuido</li>
-          </ul>
         </section>
 
         <section style="text-align: left;">
-          <h5>Sistema de manejo de codigo fuente</h5>
+          <h5>Sistema de manejo de código fuente</h5>
           <p class="fragment" data-fragment-index="1">
           <img src="img/linus-torvalds.jpg" height="100px"><br />creado en el 2005 por Linus Torvalds</p>
           <p class="fragment" data-fragment-index="2">
@@ -81,7 +74,7 @@
           mantenido por Junio C Hamano</p>
         </section>
         <section style="text-align: left;">
-          <h2>Open Source</h2>
+          <h5>Open Source</h5>
           <p>codigo fuente disponible:</p>
           <p>
             https://github.com/git/git
@@ -89,76 +82,57 @@
         </section>
 
         <section>
-          <h2>Integridad</h2>
-          Conjunto de instantáneas de un mini sistema de archivos<br />
-          <img src="img/snap-shots.png">
-
-        </section>
-
-        <section>
-          <h2>Integridad</h2>
-          <ul>
-            <li>se calcula un hash de cada istantanea</li>
-            <li>SHA-1 checksum, 40 caracteres</li>
-            <li>se verifica antes de escribir cualquier dato</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Alto Rendimiento</h2>
-          <img src="img/performance.png">
-        </section>
-
-        <section>
           <h2>Sistema Distribuido</h2>
         </section>
 
         <section>
-          <h4>Sistemas Centralizados </h4>
+          <h5>Sistemas Centralizados</h5>
           <img src="img/centralized.png" height="400px">
         </section>
 
         <section>
-          <h4>Sistemas Distribuidos</h4>
+          <h5>Sistemas Distribuidos</h5>
           <img src="img/distributed.png" height="400px">
         </section>
 
-
         <section>
-          <h2>2.1 Instalacion</h2>
+          <h2>Instalación</h2>
           <h5>Linux:</h5>
 <pre><code data-trim data-noescape>
 apt-get install git # Debian / Ubuntu
 yum install git-all # Fedora
 </code></pre>
           <h5>Windows:</h5>
-          <p><a href="http://git-scm.com/download/win">git-scm.com/download/win</a></p>
+            <p><a href="http://git-scm.com/download/win">git-scm.com/download/win</a></p>
           <h5>Linux:</h5>
-          <p><a href="http://git-scm.com/download/mac">git-scm.com/download/mac</a></p>
+            <p><a href="http://git-scm.com/download/mac">git-scm.com/download/mac</a></p>
         </section>
 
         <section>
-          <h2>2.2 Configuracion</h2>
-          <pre><code>
-          $ git config --global user.name "Jimmy Best"
-          $ git config --global user.email jimmy@best.com
-          </code></pre>
+          <h2>Configuración</h2>
+<pre><code>
+$ git config --global user.name "Jimmy Best"
+$ git config --global user.email jimmy@best.com
+$ git config --local
+$ git config --list
+</code></pre>
         </section>
 
         <section>
-          <h2>3. Conceptos fundamentales</h2>
-        </section>
-
-        <section>
-          <h5>crea un repositorio nuevo</h5>
-          <pre><code>
-           $ git init
-          </code></pre>
+          <h2>Iniciar un proyecto</h2>
+            <p>crea un repositorio nuevo sin remoto:</p>
+<pre><code>
+$ git init
+</code></pre>
+          <p></p>
+<pre><code>
+$ git clone [URL]
+</code></pre>
         </section>
 
         <section>
           <h5>verifica el estado de tu repositorio</h5>
-    <pre><code>
+<pre><code>
 $ git status
 
 On branch master
