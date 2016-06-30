@@ -53,8 +53,7 @@
           <h3>Contenidos</h3>
           <ol>
             <li>que cosa es</li>
-            <li>instalacion</li>
-            <li>configuracion</li>
+            <li>instalación & configuración</li>
             <li>commit</li>
             <li>branch</li>
             <li>staging area</li>
@@ -98,9 +97,9 @@
         <section>
           <h2>Integridad</h2>
           <ul>
-            <li>se calcula un hash de cada istantanea</li>
+            <li>Cada instantánea se asigna un hash</li>
             <li>SHA-1 checksum, 40 caracteres</li>
-            <li>se verifica antes de escribir cualquier dato</li>
+            <li>cada hash depende de múltiples factores que lo vuelven único</li>
           </ul>
         </section>
 
@@ -114,7 +113,7 @@
         </section>
 
         <section>
-          <h4>Sistemas Centralizados </h4>
+          <h4>Sistemas Centralizados</h4>
           <img src="img/centralized.png" height="400px">
         </section>
 
@@ -123,30 +122,31 @@
           <img src="img/distributed.png" height="400px">
         </section>
 
-
         <section>
-          <h2>2.1 Instalacion</h2>
+          <h2>Instalación</h2>
           <h5>Linux:</h5>
 <pre><code data-trim data-noescape>
 apt-get install git # Debian / Ubuntu
 yum install git-all # Fedora
 </code></pre>
           <h5>Windows:</h5>
-          <p><a href="http://git-scm.com/download/win">git-scm.com/download/win</a></p>
+            <p><a href="http://git-scm.com/download/win">git-scm.com/download/win</a></p>
           <h5>Linux:</h5>
-          <p><a href="http://git-scm.com/download/mac">git-scm.com/download/mac</a></p>
+            <p><a href="http://git-scm.com/download/mac">git-scm.com/download/mac</a></p>
         </section>
 
         <section>
-          <h2>2.2 Configuracion</h2>
-          <pre><code>
-          $ git config --global user.name "Jimmy Best"
-          $ git config --global user.email jimmy@best.com
-          </code></pre>
+          <h2>Configuración</h2>
+<pre><code>
+$ git config --global user.name "Jimmy Best"
+$ git config --global user.email jimmy@best.com
+$ git config --local
+$ git config --list
+</code></pre>
         </section>
 
         <section>
-          <h2>3. Conceptos fundamentales</h2>
+          <h2>Conceptos fundamentales</h2>
         </section>
 
         <section>
@@ -158,7 +158,7 @@ yum install git-all # Fedora
 
         <section>
           <h5>verifica el estado de tu repositorio</h5>
-    <pre><code>
+<pre><code>
 $ git status
 
 On branch master
