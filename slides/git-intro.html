@@ -15,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
     <link rel="stylesheet" href="css/reveal.css">
+    <!-- blood, sky, solarized -->
     <link rel="stylesheet" href="css/theme/blood.css" id="theme">
 
     <!-- Code syntax highlighting -->
@@ -57,7 +58,13 @@
             <li>iniciar un proyecto</li>
             <li>git status</li>
             <li>staging area</li>
+            <li>git add</li>
             <li>git commit</li>
+            <li>git log</li>
+            <li>git remote</li>
+            <li>git push & git pull</li>
+            <li>git branch</li>
+          </ol>
           </ol>
         </section>
 
@@ -87,19 +94,19 @@
 
         <section>
           <h5>Sistemas de control de versiones locales</h5>
-          <p><small>PRO: simple<br />CONTRA: fácil equivocarse, falta la dimensión colaborativa </small></p>
+          <p style="text-align: left;"><small>PRO: simple<br />CONTRA: fácil equivocarse, falta la dimensión colaborativa </small></p>
           <img src="img/versiones-locales.png" height="400px">
         </section>
 
         <section>
           <h5>Sistemas Centralizados - CVCS</h5>
-          <p><small>PRO: introduce colaboración <br />CONTRA: depende de único servidor, posible perdida de datos</small></p>
+          <p style="text-align: left;"><small>PRO: introduce colaboración <br />CONTRA: depende de único servidor, posible perdida de datos</small></p>
           <img src="img/centralized.png" height="400px">
         </section>
 
         <section>
           <h5>Sistemas Distribuidos - DVCS</h5>
-          <p><small>replica total del repositorio</small></p>
+          <p style="text-align: left;"><small>replica total del repositorio<br />trabajo off-line</small></p>
           <img src="img/distributed.png" height="400px">
         </section>
 
@@ -112,12 +119,13 @@ yum install git-all # Fedora
 </code></pre>
           <h5>Windows:</h5>
             <p><a href="http://git-scm.com/download/win">git-scm.com/download/win</a></p>
-          <h5>Linux:</h5>
+          <h5>Mac:</h5>
             <p><a href="http://git-scm.com/download/mac">git-scm.com/download/mac</a></p>
         </section>
 
         <section>
-          <h2>Configuración</h2>
+          <h2>git config</h2>
+          <p>configurar el ambiente de trabajo, global o local</p>
 <pre><code>
 $ git config --global user.name "Jimmy Best"
 $ git config --global user.email jimmy@best.com
@@ -132,14 +140,19 @@ $ git config --list
 <pre><code>
 $ git init
 </code></pre>
-          <p></p>
+            <p>clonar repo con SSH:</p>
 <pre><code>
-$ git clone [URL]
+$ git clone git@github.com:carlosremuzzi/carlosremuzzi.github.com.git
+</code></pre>
+            <p>clonar repo con HTTPS:</p>
+<pre><code>
+$ git clone https://github.com/carlosremuzzi/carlosremuzzi.github.com.git
 </code></pre>
         </section>
 
         <section>
-          <h5>verifica el estado de tu repositorio</h5>
+          <h2>git status</h2>
+          <p>verificar el estadao de tu repositorio</p>
 <pre><code>
 $ git status
 
@@ -169,14 +182,16 @@ Untracked files:
         </section>
 
         <section>
-          <h5>Añadir cambios</h5>
+          <h2>git add</h2>
+          <p>Añadir cambios</p>
           <pre><code>
            $ git add
           </code></pre>
         </section>
 
         <section>
-          <h5>Hacer Commit</h5>
+          <h2>git commit</h2>
+          <p>registrar los cambios</p>
           <pre><code>
 $ git commit     # la staging area
 $ git commit -a  # todos los archivos
@@ -184,7 +199,8 @@ $ git commit -a  # todos los archivos
         </section>
 
         <section>
-          <h5>Ver la historia de tus commits</h5>
+          <h2>git log</h2>
+          <p>Ver la historia de tus commits</p>
           <pre><code>
 $ git log 
 commit 0f1bf4b1b5cb74342de9c1f6280b39ca5a1f79eb
@@ -197,6 +213,7 @@ Date:   Tue Apr 19 20:22:57 2016 +0000
         </section>
 
         <section>
+          <h2>git remote</h2>
           <h5>Configurar un repositorio remoto</h5>
           <pre><code>
 $ git remote add URL_DEL_REPOSITORIO
@@ -204,6 +221,7 @@ $ git remote add URL_DEL_REPOSITORIO
         </section>
 
         <section>
+          <h2>git push</h2>
           <h5>Enviar a repositorio remoto</h5>
           <pre><code>
 $ git push -u origin master
@@ -211,6 +229,7 @@ $ git push -u origin master
         </section>
 
         <section>
+          <h2>git pull</h2>
           <h5>Jalar del repositorio remoto</h5>
           <pre><code>
 $ git pull 
@@ -218,6 +237,7 @@ $ git pull
         </section>
 
         <section>
+          <h2>git branch</h2>
           <h5>Crear una nueva rama</h5>
           <pre><code>
 $ git branch NOMBRE_DE_LA_RAMA   # crea la rama
@@ -226,6 +246,7 @@ $ git checkout -b NOMBRE_DE_LA_RAMA   # crea la rama y entra a la misma
         </section>
 
         <section>
+          <h2>git checkout</h2>
           <h5>Cambiar de rama</h5>
           <pre><code>
 $ git checkout NOMBRE_DE_LA_RAMA 
@@ -233,6 +254,7 @@ $ git checkout NOMBRE_DE_LA_RAMA
         </section>
 
         <section>
+          <h2>git merge</h2>
           <h5>Unir dos ramas</h5>
           <pre><code>
 $ git merge NOMBRE_DE_LA_SEGUNDA_RAMA 
@@ -242,7 +264,7 @@ $ git merge NOMBRE_DE_LA_SEGUNDA_RAMA
 
 
         <section>
-          <h3>4. Mas Herramientas</h3>
+          <h2>Mas Herramientas</h2>
           <ul> 
             <li>blame</li>
             <li>cherry-pick</li>
