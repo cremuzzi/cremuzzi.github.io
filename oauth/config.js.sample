@@ -1,0 +1,2 @@
+var backend_api = 'https://localhost:8030';
+var subdomain = '';
