@@ -1,1 +1,87 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="shortcut icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><link rel="apple-touch-icon" href="logo192.png"/><link rel="manifest" href="/manifest.json"/><title>Dashboard</title><link href="/static/css/2.051905ae.chunk.css" rel="stylesheet"><link href="/static/css/main.a9af0b1c.chunk.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script>!function(f){function e(e){for(var r,t,n=e[0],o=e[1],u=e[2],a=0,l=[];a<n.length;a++)t=n[a],Object.prototype.hasOwnProperty.call(c,t)&&c[t]&&l.push(c[t][0]),c[t]=0;for(r in o)Object.prototype.hasOwnProperty.call(o,r)&&(f[r]=o[r]);for(d&&d(e);l.length;)l.shift()();return p.push.apply(p,u||[]),i()}function i(){for(var e,r=0;r<p.length;r++){for(var t=p[r],n=!0,o=1;o<t.length;o++){var u=t[o];0!==c[u]&&(n=!1)}n&&(p.splice(r--,1),e=a(a.s=t[0]))}return e}var t={},c={1:0},p=[];function a(e){if(t[e])return t[e].exports;var r=t[e]={i:e,l:!1,exports:{}};return f[e].call(r.exports,r,r.exports,a),r.l=!0,r.exports}a.m=f,a.c=t,a.d=function(e,r,t){a.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},a.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},a.t=function(r,e){if(1&e&&(r=a(r)),8&e)return r;if(4&e&&"object"==typeof r&&r&&r.__esModule)return r;var t=Object.create(null);if(a.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:r}),2&e&&"string"!=typeof r)for(var n in r)a.d(t,n,function(e){return r[e]}.bind(null,n));return t},a.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return a.d(r,"a",r),r},a.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},a.p="/";var r=window["webpackJsonpreact-d3-dashboard"]=window["webpackJsonpreact-d3-dashboard"]||[],n=r.push.bind(r);r.push=e,r=r.slice();for(var o=0;o<r.length;o++)e(r[o]);var d=n;i()}([])</script><script src="/static/js/2.82acb4aa.chunk.js"></script><script src="/static/js/main.96eaff6b.chunk.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""/>
+    <style>
+      #bolivia { height: 700px; }
+    </style>
+  </head>
+  <body>
+    <div id="bolivia"></div>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""></script>
+    <script>
+      var ents_layer;
+      function getColor(d) {
+              return d > 1000 ? '#800026' :
+                         d > 500  ? '#BD0026' :
+                         d > 200  ? '#E31A1C' :
+                         d > 100  ? '#FC4E2A' :
+                         d > 50   ? '#FD8D3C' :
+                         d > 20   ? '#FEB24C' :
+                         d > 10   ? '#FED976' :
+                                    '#FFEDA0';
+      }
+      function style(feature) {
+              return {
+                          fillColor: getColor(feature.properties["municipios_ents - resumen_Cardiovascular-tot"]),
+                          weight: 2,
+                          opacity: 1,
+                          color: 'white',
+                          dashArray: '3',
+                          fillOpacity: 0.7
+                      };
+      }
+      function highlightFeature(e) {
+              var layer = e.target;
+
+              layer.setStyle({
+                          weight: 5,
+                          color: '#666',
+                          dashArray: '',
+                          fillOpacity: 0.7
+                      });
+
+              if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+                          layer.bringToFront();
+                      }
+      }
+
+      function resetHighlight(e) {
+              ents_layer.resetStyle(e.target);
+      }
+
+      function zoomToFeature(e) {
+              map.fitBounds(e.target.getBounds());
+      }
+      function onEachFeature(feature, layer) {
+              layer.on({
+                          mouseover: highlightFeature,
+                          mouseout: resetHighlight,
+                          click: zoomToFeature
+                      });
+      }
+      var bolivia = L.map('bolivia').setView([-16.394,-63.545], 6);
+      L.tileLayer('http://a.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+              maxZoom: 18
+      }).addTo(bolivia);
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var myObj = JSON.parse(this.responseText);
+          ents_layer = L.geoJSON(myObj, {
+            style: style,
+            onEachFeature: onEachFeature
+          }).addTo(bolivia);
+        }
+      };
+      xmlhttp.open("GET", "municipios_ents.geojson", true);
+      xmlhttp.send();
+    </script>
+  </body>
+</html>
