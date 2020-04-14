@@ -28,7 +28,7 @@
       }
       function style(feature) {
               return {
-                          fillColor: getColor(feature.properties["municipios_ents - resumen_Cardiovascular-tot"]),
+                          fillColor: getColor(feature.properties["snis-ents-por-municipio-por-edad_Cardiovascular-tot-60+"]),
                           weight: 2,
                           opacity: 1,
                           color: 'white',
@@ -80,7 +80,7 @@
           }).addTo(bolivia);
         }
       };
-      xmlhttp.open("GET", "municipios_ents.geojson", true);
+      xmlhttp.open("GET", "data/ents.test.geojson", true);
       xmlhttp.send();
     </script>
   </body>
