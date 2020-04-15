@@ -7,6 +7,29 @@
       crossorigin=""/>
     <style>
       #bolivia { height: 700px; }
+      .info {
+        padding: 6px 8px;
+        font: 14px/16px Arial, Helvetica, sans-serif;
+        background: white;
+        background: rgba(255,255,255,0.8);
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        border-radius: 5px;
+      }
+      .info h4 {
+        margin: 0 0 5px;
+        color: #777;
+      }
+      .legend {
+          line-height: 18px;
+          color: #555;
+      }
+      .legend i {
+          width: 18px;
+          height: 18px;
+          float: left;
+          margin-right: 8px;
+          opacity: 0.7;
+      }
     </style>
   </head>
   <body>
@@ -16,47 +39,52 @@
       crossorigin=""></script>
     <script>
       var ents_layer;
+      var bolivia = L.map('bolivia').setView([-16.394,-63.545], 6);
+
       function getColor(d) {
-              return d > 1000 ? '#800026' :
-                         d > 500  ? '#BD0026' :
-                         d > 200  ? '#E31A1C' :
-                         d > 100  ? '#FC4E2A' :
-                         d > 50   ? '#FD8D3C' :
-                         d > 20   ? '#FEB24C' :
-                         d > 10   ? '#FED976' :
-                                    '#FFEDA0';
+        return d > 2 ? '#800026' :
+          d > 1  ? '#BD0026' :
+          d > 0.9  ? '#E31A1C' :
+          d > 0.7  ? '#FC4E2A' :
+          d > 0.5   ? '#FD8D3C' :
+          d > 0.3   ? '#FEB24C' :
+          d > 0.01   ? '#FED976' :
+                     'rgba(0,0,0,0)';
       }
+
       function style(feature) {
-              return {
-                          fillColor: getColor(feature.properties["snis-ents-por-municipio-por-edad_Cardiovascular-tot-60+"]),
-                          weight: 2,
-                          opacity: 1,
-                          color: 'white',
-                          dashArray: '3',
-                          fillOpacity: 0.7
-                      };
+        return {
+          fillColor: getColor(feature.properties["snis-ents-por-municipio-por-edad_tot_percent_60+"]),
+          weight: 2,
+          opacity: 1,
+          color: 'white',
+          dashArray: '3',
+          fillOpacity: 0.7
+        };
       }
       function highlightFeature(e) {
-              var layer = e.target;
+        var layer = e.target;
 
-              layer.setStyle({
-                          weight: 5,
-                          color: '#666',
-                          dashArray: '',
-                          fillOpacity: 0.7
-                      });
+        layer.setStyle({
+              weight: 5,
+              color: '#666',
+              dashArray: '',
+              fillOpacity: 0.7
+        });
 
-              if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-                          layer.bringToFront();
-                      }
+        if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+                    layer.bringToFront();
+        }
+        info.update(layer.feature.properties);
       }
 
       function resetHighlight(e) {
-              ents_layer.resetStyle(e.target);
+        ents_layer.resetStyle(e.target);
+        info.update();
       }
 
       function zoomToFeature(e) {
-              map.fitBounds(e.target.getBounds());
+              bolivia.fitBounds(e.target.getBounds());
       }
       function onEachFeature(feature, layer) {
               layer.on({
@@ -65,11 +93,28 @@
                           click: zoomToFeature
                       });
       }
-      var bolivia = L.map('bolivia').setView([-16.394,-63.545], 6);
       L.tileLayer('https://a.tile.openstreetmap.org/{z}/{x}/{y}.png', {
               attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
               maxZoom: 18
       }).addTo(bolivia);
+
+      var info = L.control();
+
+      info.onAdd = function (map) {
+        this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+        this.update();
+        return this._div;
+      };
+
+      // method that we will use to update the control based on feature properties passed
+      info.update = function (props) {
+        this._div.innerHTML = '<h4>Factores de Riesgo en mayores de 60</h4>' +  (props ?
+          '<b>' + props["MUNICIPIO"] + '</b><br />' + props["snis-ents-por-municipio-por-edad_tot_percent_60+"] + ' %'
+          : 'Seleccionar un municipio');
+      };
+
+      info.addTo(bolivia);
+
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
