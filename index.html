@@ -48,16 +48,16 @@
           d > 0.7  ? '#FC4E2A' :
           d > 0.5   ? '#FD8D3C' :
           d > 0.3   ? '#FEB24C' :
-          d > 0.01   ? '#FED976' :
-                     'rgba(0,0,0,0)';
+          d > 0.01  ? '#FED976' :
+                     '#cccccc';
       }
 
       function style(feature) {
         return {
           fillColor: getColor(feature.properties["snis-ents-por-municipio-por-edad_tot_percent_60+"]),
-          weight: 2,
+          weight: 1,
           opacity: 1,
-          color: 'white',
+          color: '#aaaaaa',
           dashArray: '3',
           fillOpacity: 0.7
         };
@@ -66,8 +66,8 @@
         var layer = e.target;
 
         layer.setStyle({
-              weight: 5,
-              color: '#666',
+              weight: 1,
+              color: '#666666',
               dashArray: '',
               fillOpacity: 0.7
         });
